@@ -10,12 +10,16 @@ const URL = 'https://dev-recipe.donots.co.kr/api/v2/main/info';
 async function getMainInfoData() {
   const res = await fetch(URL);
   const data = res.json();
-  return JSON.stringify(data);
+  // return JSON.stringify(data);
+  return data;
 }
 
-async function MainPage() {
-  const mainData = await getMainInfoData();
-  return <div>{mainData}11111</div>;
-}
+export default async function MainPage() {
+  const homeData = await getMainInfoData();
 
-export default MainPage;
+  return (
+    <div>
+      {homeData.code} {homeData.message}
+    </div>
+  );
+}
