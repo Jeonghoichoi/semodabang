@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Hello Next.js Page",
-  description: "next desc",
+  title: 'Hello Next.js Page',
+  description: 'next desc',
 };
 
-const URL = "https://dev-recipe.donots.co.kr/api/v2/main/info";
+const URL = 'https://dev-recipe.donots.co.kr/api/v2/main/info';
 
 async function getMainInfoData() {
   const res = await fetch(URL);
@@ -15,7 +15,7 @@ async function getMainInfoData() {
 
 async function MainPage() {
   const mainData = await getMainInfoData();
-  return <div>{mainData}</div>;
+  return <div>{mainData}11111</div>;
 }
 
 export default MainPage;
