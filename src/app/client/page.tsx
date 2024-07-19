@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@/shared/ui/button';
+import { Button } from '@/shared/ui/button/button';
 import { useState, useEffect } from 'react';
 export default function MainPage() {
   const [resData, setResData] = useState();
