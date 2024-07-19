@@ -22,7 +22,7 @@ export default function MainPage() {
         variant="outline"
         size="sm"
       >
-        123123
+        버튼이요~
       </Button>
     </div>
   );

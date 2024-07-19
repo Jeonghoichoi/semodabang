@@ -1,1 +1,3 @@
-1231231;
+export default function Page() {
+  return <div>Hello world;</div>;
+}
