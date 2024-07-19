@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Icon } from '@/shared/ui/Icon';
+import { Icon } from '@/shared/ui/button/Icon';
 
 const navItems = [
   { name: '홈', icon: 'home' as const },
