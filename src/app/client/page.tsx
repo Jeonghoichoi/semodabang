@@ -1,5 +1,6 @@
 'use client';
 
+import { Button } from '@/components/ui/button';
 import { useState, useEffect } from 'react';
 export default function MainPage() {
   const [resData, setResData] = useState();
@@ -18,9 +19,7 @@ export default function MainPage() {
   return (
     <div>
       클라버전
-      <div className="text-gray-400">태일윈드 테슷트</div>
-      <div className="font-14">123123</div>
-      <div className="w-full">tttt</div>
+      <Button variant="outline">123123</Button>
     </div>
   );
 }
