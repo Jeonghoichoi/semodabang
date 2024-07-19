@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
+import '@/app/style/global.css';
 
 export const metadata: Metadata = {
-  title: "Next.js",
-  description: "해보자 한번",
+  title: 'Next.js',
+  description: '해보자 한번',
 };
 
 type Props = {
