@@ -18,7 +18,12 @@ export default function MainPage() {
   return (
     <div>
       클라버전
-      <Button variant="outline">123123</Button>
+      <Button
+        variant="outline"
+        size="sm"
+      >
+        123123
+      </Button>
     </div>
   );
 }
