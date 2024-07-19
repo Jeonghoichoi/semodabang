@@ -1,19 +1,18 @@
+import './global.css';
 import type { Metadata } from 'next';
-import '@/app/global.css';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Next.js',
-  description: '해보자 한번',
+  title: '세모클래스',
+  description: '온라인 클래스 플랫폼',
 };
 
-type Props = {
-  children: React.ReactNode;
-};
-
-export default function RootLayout({ children }: Props) {
+export default function ClassRootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="ko">
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
