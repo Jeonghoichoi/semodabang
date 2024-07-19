@@ -14,7 +14,6 @@ export default function MainPage() {
   useEffect(() => {
     getData();
   }, []);
-  console.log(resData);
 
   return (
     <div>
