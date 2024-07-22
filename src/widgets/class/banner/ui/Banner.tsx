@@ -19,8 +19,8 @@ export function Banner() {
         layout="fill"
         objectFit="cover"
       />
-      <div className="absolute inset-0 bg-black bg-opacity-40 p-5 flex flex-col justify-between">
-        <p className="text-sm font-bold text-white leading-tight">{banners[currentBanner].title}</p>
+      <div className="absolute inset-0 bg-opacity-40 p-5 flex flex-col justify-between">
+        {/* <p className="text-sm font-bold text-white leading-tight">{banners[currentBanner].title}</p> */}
         <div className="self-end bg-[#131417] bg-opacity-90 rounded px-1.5 py-0.5 text-xs text-white">
           {currentBanner + 1}/{banners.length}
         </div>

@@ -9,7 +9,7 @@ export function ClassCard({ classItem }: Props) {
   return (
     <div className="relative w-full h-[375px] rounded-2xl overflow-hidden mb-6">
       <Image
-        src={classItem.image}
+        src={`${classItem.image}`}
         alt={classItem.title}
         layout="fill"
         objectFit="cover"
