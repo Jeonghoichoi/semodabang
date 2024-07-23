@@ -4,30 +4,55 @@ import { useState } from 'react';
 import { Icon } from '@/shared/ui/button/Icon';
 
 const navItems = [
-  { name: '홈', icon: 'home' as const },
-  { name: '세모클래스', icon: 'class' as const },
-  { name: '세모책', icon: 'book' as const },
-  { name: '세모노트', icon: 'note' as const },
-  { name: '마이', icon: 'profile' as const },
+  {
+    key: 'home',
+    name: '홈',
+    link: '/home',
+    icon: 'home' as const,
+  },
+  {
+    key: 'class',
+    name: '세모클래스',
+    link: '/class',
+    icon: 'class' as const,
+  },
+  {
+    key: 'book',
+    name: '세모책',
+    link: '/book',
+    icon: 'book' as const,
+  },
+  {
+    key: 'note',
+    name: '세모노트',
+    link: '/note',
+    icon: 'note' as const,
+  },
+  {
+    key: 'my',
+    name: '마이',
+    link: '/my',
+    icon: 'profile' as const,
+  },
 ];
 
 export function BottomNavigation() {
-  const [activeItem, setActiveItem] = useState('홈');
+  const [activeItem, setActiveItem] = useState('home');
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 h-[78px] bg-white">
+    <nav className="fixed w-full max-w-[640px] bottom-0 left-0 right-0 h-20 bg-white my-0 mx-auto">
       <div className="flex justify-around items-center h-14">
         {navItems.map(item => (
           <button
-            key={item.name}
+            key={item.key}
             className="flex flex-col items-center"
-            onClick={() => setActiveItem(item.name)}
+            onClick={() => setActiveItem(item.key)}
           >
             <Icon
               name={item.icon}
-              className={`w-8 h-8 ${activeItem === item.name ? 'text-[#2CADAF]' : 'text-gray-600'}`}
+              className={`w-8 h-8 ${activeItem === item.key ? 'text-[#2CADAF]' : 'text-gray-600'}`}
             />
-            <span className={`text-xs ${activeItem === item.name ? 'text-[#2CADAF]' : 'text-gray-600'}`}>{item.name}</span>
+            <span className={`text-xs ${activeItem === item.key ? 'text-[#2CADAF]' : 'text-gray-600'}`}>{item.name}</span>
           </button>
         ))}
       </div>
