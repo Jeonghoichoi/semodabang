@@ -1,6 +1,5 @@
 import { Header } from '@/widgets/Header';
-import { Banner } from '@/widgets/class/banner';
-import { ClassList } from '@/widgets/class/list';
+import { Banner, ClassList } from '@/pages/class';
 import { BottomNavigation } from '@/widgets/bottom/navigation';
 
 export default function ClassPage() {

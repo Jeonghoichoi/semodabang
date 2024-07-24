@@ -1,5 +1,5 @@
-import FromClient from '@/widgets/test/FromClient';
-import FromServer from '@/widgets/test/FromServer';
+import FromClient from '@/pages/test/FromClient';
+import FromServer from '@/pages/test/FromServer';
 import Link from 'next/link';
 import { headers } from 'next/headers';
 import { unstable_noStore as noStore } from 'next/cache';
