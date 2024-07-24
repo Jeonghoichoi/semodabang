@@ -10,7 +10,7 @@ function generateDate() {
   });
 }
 
-function formatDate(date: Date) {
+export function formatDate(date: Date) {
   const pad = (num: number) => String(num).padStart(2, '0');
 
   const year = date.getFullYear();
