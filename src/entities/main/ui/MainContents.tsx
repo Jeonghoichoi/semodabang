@@ -7,7 +7,7 @@ import { MainContentsResponse } from '@/entities/main/model/types';
 import { API_ENDPOINTS } from '@/entities/main/api/endpoints';
 import { fetcher } from '@/shared/api/fetcher';
 
-export default async function MainContents() {
+export async function MainContents() {
   const { data } = await fetcher<MainContentsResponse[]>(API_ENDPOINTS.MAIN.CONTENTS);
 
   return (

@@ -1,7 +1,7 @@
-import MainContents from '@/entities/main/ui/MainContents';
+import { MainContents } from '@/entities/main';
 import Link from 'next/link';
 
-export default function Page() {
+export default function AppPage() {
   return (
     <>
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
