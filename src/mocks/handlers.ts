@@ -68,4 +68,21 @@ export const handlers = [
       timestamp: formattedTime,
     });
   }),
+
+  http.get('/api/main', ({ request }): StrictResponse<any> => {
+    return HttpResponse.json({
+      success: true,
+      code: 'SUCCESS',
+      message: '정상 처리 되었습니다.',
+      aid: 'a1234567890',
+      data: [
+        {
+          contentsId: 0,
+          title: '미스터리 뮤지엄',
+          description: '박물관으로부터 온 한 통의 편지! 편지의 주인공을 찾아 박물관 곳곳을 누비며 보물들의 이야기를 들어봐요.',
+          imageUrl: '/images/class1.jpg',
+        },
+      ],
+    });
+  }),
 ];
