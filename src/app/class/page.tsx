@@ -1,5 +1,5 @@
 import { Header } from '@/widgets/Header';
-import { Banner, ClassList } from '@/pages/class';
+import { Banner, ClassList } from '@/app/class/_ui';
 import { BottomNavigation } from '@/widgets/bottom/navigation';
 
 export default function ClassPage() {

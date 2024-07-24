@@ -1,5 +1,5 @@
-import FromClient from '@/pages/test/FromClient';
-import FromServer from '@/pages/test/FromServer';
+import FromClient from './_ui/FromClient';
+import FromServer from './_ui/FromServer';
 import Link from 'next/link';
 import { headers } from 'next/headers';
 import { unstable_noStore as noStore } from 'next/cache';
