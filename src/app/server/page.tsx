@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 const URL = 'https://dev-recipe.donots.co.kr/api/v2/main/info';
 
 async function getMainInfoData() {
+  await new Promise(resolve => setTimeout(resolve, 10000));
   const res = await fetch(URL);
   const data = res.json();
   // return JSON.stringify(data);

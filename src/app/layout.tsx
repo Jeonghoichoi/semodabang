@@ -2,9 +2,9 @@ import { MainLayout } from '@/widgets/layout/';
 
 import './global.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Noto_Sans_KR } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+const NOTOSANSKR = Noto_Sans_KR({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: '세모클래스',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function ClassRootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko">
-      <body className={inter.className}>
+      <body className={NOTOSANSKR.className}>
         <MainLayout> {children}</MainLayout>
       </body>
     </html>
