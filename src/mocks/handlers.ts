@@ -58,11 +58,32 @@ export const handlers = [
   //     }
   //   })
   // }),
-  http.get('/api/getTime', ({ request, params }): StrictResponse<any> => {
+  http.get('/api/client/getTime', ({ request, params }): StrictResponse<any> => {
     const now = new Date();
     const formattedTime = formatDate(now);
 
-    console.log('/api/getTime:', formattedTime);
+    // console.log('/api/client/getTime:', formattedTime);
+
+    return HttpResponse.json({
+      timestamp: formattedTime,
+    });
+  }),
+  http.get('/api/server/getTime/:number', ({ request, params }): StrictResponse<any> => {
+    const now = new Date();
+    const formattedTime = formatDate(now);
+    const { number } = params;
+
+    console.log('/api/server/getTime/' + number, formattedTime);
+
+    return HttpResponse.json({
+      timestamp: formattedTime,
+    });
+  }),
+  http.get('/api/server/getTime', ({ request, params }): StrictResponse<any> => {
+    const now = new Date();
+    const formattedTime = formatDate(now);
+
+    console.log('/api/server/getTime/', formattedTime);
 
     return HttpResponse.json({
       timestamp: formattedTime,

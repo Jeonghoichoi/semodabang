@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "concurrently \"npx tsx watch ./src/mocks/http.ts\" \"next dev -p 3030 \"",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3030",
+    "start:local": "concurrently \"npx tsx watch ./src/mocks/http.ts\" \"ENV=L next build && cp -r .next/static .next/standalone/.next/ && cp -r public .next/standalone/ && PORT=3030 node .next/standalone/server.js\"",
     "mock": "npx tsx watch ./src/mocks/http.ts"
   },
   "keywords": [],

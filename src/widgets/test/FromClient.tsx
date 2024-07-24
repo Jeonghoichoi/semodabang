@@ -11,7 +11,7 @@ export default function FromClient() {
 
   useEffect(() => {
     const getData = async () => {
-      const data = await run('http://localhost:9090/api/getTime');
+      const data = await run('http://localhost:9090/api/client/getTime');
       const { timestamp } = (await data?.json()) || { timestamp: '실패' };
       setTimestamp(timestamp);
     };

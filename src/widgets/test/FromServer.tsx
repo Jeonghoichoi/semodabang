@@ -1,14 +1,25 @@
-// 서버에서 api를 호출 후 렌더링!
-export default async function FromServer() {
-  const data = await fetch('http://localhost:9090/api/getTime', {
-    cache: 'no-store', // fetch에 대한 설명은 2편에서 보고, 일단은 넘어가자.
+import { headers } from 'next/headers';
+export const revalidate = 0;
+export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
+export default async function FromServer({ parentTimestamp }: { parentTimestamp?: string }) {
+  const headersList = headers();
+  const referer = headersList.get('referer');
+
+  const data = await fetch('http://localhost:9090/api/server/getTime', {
+    cache: 'no-store',
+    // next: {
+    //   revalidate: 0,
+    // },
   });
   const { timestamp } = await data.json();
   console.log('FromServer 도착:', timestamp);
   return (
     <>
+      <div>Referer: {referer}</div>
       <div>From Server</div>
-      <div>{timestamp}</div>
+      <div>{parentTimestamp || timestamp}</div>
     </>
   );
 }
