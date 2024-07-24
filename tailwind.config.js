@@ -99,6 +99,10 @@ module.exports = {
         fadeIn: 'fadeIn 1s ease-in-out 1',
         fadeOut: 'fadeOut 1s ease-in-out 1',
       },
+      boxShadow: {
+        top: '0 -5px 10px -5px rgba(0, 0, 0, 0.3)',
+        bottom: '0 5px 10px -5px rgba(0, 0, 0, 0.3)',
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],

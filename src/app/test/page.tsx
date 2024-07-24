@@ -24,7 +24,7 @@ export default async function TestPage() {
   console.log('TestPage 도착:', timestamp);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between">
       <div>Referer: {referer}</div>
       <div>
         <FromClient />

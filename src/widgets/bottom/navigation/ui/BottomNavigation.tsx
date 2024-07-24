@@ -40,7 +40,7 @@ export function BottomNavigation() {
   const [activeItem, setActiveItem] = useState('home');
 
   return (
-    <nav className="fixed w-full max-w-[640px] bottom-0 left-0 right-0 h-20 bg-white my-0 mx-auto">
+    <nav className="fixed w-full max-w-[640px] bottom-0 left-0 right-0 h-20 bg-white my-0 mx-auto shadow-top">
       <div className="flex justify-around items-center h-14">
         {navItems.map(item => (
           <button

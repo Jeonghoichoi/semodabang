@@ -1,5 +1,4 @@
 import { MainLayout } from '@/widgets/layout/';
-
 import './global.css';
 import type { Metadata } from 'next';
 import { Noto_Sans_KR } from 'next/font/google';
@@ -17,7 +16,7 @@ export default function ClassRootLayout({ children }: { children: React.ReactNod
     <html lang="ko">
       <body className={NOTOSANSKR.className}>
         <GlobalErrorBoundary>
-          <MainLayout>{children}</MainLayout>
+          <MainLayout isShowGnb>{children}</MainLayout>
         </GlobalErrorBoundary>
       </body>
     </html>

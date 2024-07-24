@@ -22,7 +22,7 @@ export async function MainContents() {
               <CardTitle>{content.title}</CardTitle>
               <CardDescription className="pt-2">{content.description}</CardDescription>
             </CardHeader>
-            <CardContent className="relative w-80 h-96">
+            <CardContent className="relative w-full h-96">
               <Image
                 src={content.imageUrl}
                 fill
