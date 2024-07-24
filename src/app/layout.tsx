@@ -3,6 +3,7 @@ import { MainLayout } from '@/widgets/layout/';
 import './global.css';
 import type { Metadata } from 'next';
 import { Noto_Sans_KR } from 'next/font/google';
+import { GlobalErrorBoundary } from '@/widgets/error/GlobalErrorBoundary';
 
 const NOTOSANSKR = Noto_Sans_KR({ subsets: ['latin'] });
 
@@ -15,7 +16,9 @@ export default function ClassRootLayout({ children }: { children: React.ReactNod
   return (
     <html lang="ko">
       <body className={NOTOSANSKR.className}>
-        <MainLayout> {children}</MainLayout>
+        <GlobalErrorBoundary>
+          <MainLayout>{children}</MainLayout>
+        </GlobalErrorBoundary>
       </body>
     </html>
   );
