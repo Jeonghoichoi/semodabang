@@ -2,10 +2,10 @@
 
 세모다방 프로젝트요!!!!
 
-# 패키지 구조 - 경량화한 FSD : app, pages, shared 만 사용
+# 패키지 구조 - FSD : app, pages, features, entities , shared 
 app - nextjs 14 app router
-pages - 라우터의 화면 > n개의 widgets, [features], [entities], shared 으로 구성될 수 있음
-widgets - 페이지의 구성요소 > n개의 [features], [entities], shared 으로 구성될 수 있음 
+pages - app router page.tsx에서 쓰이는 ui : n개의 widgets, [features], [entities], shared 으로 구성될 수 있음
+widgets - n개의 pages에서 쓰일 공통ui > n개의 [features], [entities], shared 으로 구성될 수 있음 
 features - 사용자 상호작용, 비즈니스 로직 > n개의 entities, shared 으로 구성될 수 있음
 entities - 비즈니스 데이터 엔티티 > api조회 > zustand > 엔티티 수정삭제
 shared - 상위 레이어에서 사용할 수 있는 공통 기능 레이어
