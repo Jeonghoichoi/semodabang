@@ -1,7 +1,7 @@
 import { ClassCard, Class } from '@/entities/Class';
 import { getClasses } from '@/shared/api/classApi';
 
-export async function ClassList() {
+export const ClassList: any = async () => {
   const classes = await getClasses();
 
   return (
@@ -14,4 +14,4 @@ export async function ClassList() {
       ))}
     </div>
   );
-}
+};

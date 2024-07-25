@@ -18,30 +18,30 @@ const icons = {
       <path
         d="M8.1001 21.6561H23.8168"
         stroke="black"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M10.179 21.6562V13.8361C10.179 10.8887 12.7686 8.50354 15.963 8.50354C19.1575 8.50354 21.7471 10.8887 21.7471 13.8361V21.6562"
         stroke="black"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M15.9626 6.7998V8.50351"
         stroke="black"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M18.9616 22.1927C18.9616 23.8539 17.6157 25.1998 15.9546 25.1998C14.2934 25.1998 12.9475 23.8539 12.9475 22.1927"
         stroke="black"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </>
   ),
