@@ -8,6 +8,7 @@ const GridBox = React.forwardRef<HTMLDivElement, GridBoxType>(({ className, grid
 
   return (
     <div
+      ref={ref}
       className={`
         ${className || ''}
         semo-gridbox
