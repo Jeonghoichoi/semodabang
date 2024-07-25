@@ -1,0 +1,7 @@
+.semo-gridbox {
+  display: grid;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  grid-template-areas: "semo-grid contents";
+}
