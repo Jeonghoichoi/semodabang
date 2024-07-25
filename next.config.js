@@ -1,4 +1,10 @@
 module.exports = {
+  experimental: {
+    staleTimes: {
+      dynamic: 10,
+      static: 180,
+    },
+  },
   logging: {
     fetches: {
       fullUrl: true,

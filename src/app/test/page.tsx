@@ -6,7 +6,7 @@ import { headers } from 'next/headers';
 
 // export const revalidate = 0;
 // export const runtime = 'nodejs';
-// export const dynamic = 'force-dynamic';
+export const dynamic = 'force-dynamic';
 // export const fetchCache = 'force-no-store';
 
 // export const revalidate = 40;
@@ -17,19 +17,21 @@ export default async function TestPage() {
   // const referer = headersList.get('referer');
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-around p-24">
       <div>
         <FromClient />
       </div>
       <div>
         <FromServer />
       </div>
-      <Link
-        href="/"
-        prefetch={false}
-      >
-        go to home page
-      </Link>
+      <div>
+        <Link
+          href="/"
+          prefetch={false}
+        >
+          go to home page
+        </Link>
+      </div>
     </main>
   );
 }
