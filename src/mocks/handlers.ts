@@ -31,14 +31,19 @@ const User = [
 const Posts = [];
 
 export const handlers = [
-  // http.post('/api/login', () => {
-  //   console.log('로그인');
-  //   return HttpResponse.json(User[1], {
-  //     headers: {
-  //       'Set-Cookie': 'connect.sid=msw-cookie;HttpOnly;Path=/'
-  //     }
-  //   })
-  // }),
+  http.post('/api/login', ({ request }): StrictResponse<any> => {
+    return HttpResponse.json({
+      success: true,
+      code: 'SUCCESS',
+      message: '정상 처리 되었습니다.',
+      aid: 'a1234567890',
+      data: {
+        id: 'super_admin',
+        email: 'super.admin@kyobo.com',
+        nickname: 'susususuper',
+      },
+    });
+  }),
   // http.post('/api/logout', () => {
   //   console.log('로그아웃');
   //   return new HttpResponse(null, {
