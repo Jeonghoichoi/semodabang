@@ -1,4 +1,6 @@
 export type GridBoxType = {
+  className?: string;
+
   // 그리드 row 반복 개수
   gridRowsRepeat?: string;
 

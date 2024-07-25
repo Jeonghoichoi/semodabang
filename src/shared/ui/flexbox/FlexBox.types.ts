@@ -13,8 +13,14 @@ export type FlexBoxType = {
   // true: wrap | false: noWrap
   wrap?: boolean;
 
+  // flex item row gap -> 1 | 2 | 3 | 4 ... 8   1 = 4px;
+  rowGap?: string | number;
+
+  // flex item column gap -> 1 | 2 | 3 | 4 ... 8   1 = 4px;
+  columnGap?: string | number;
+
   // flex item gap -> 1 | 2 | 3 | 4 ... 8   1 = 4px;
-  gap?: string;
+  gap?: string | number;
 
   // tailwind  margin code
   margin?: string;

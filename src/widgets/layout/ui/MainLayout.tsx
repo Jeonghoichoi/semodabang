@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { BottomNavigation } from '@/widgets/bottom/navigation';
 import { FlexBox } from '@/shared/ui/flexbox/flexBox';
 
@@ -12,9 +13,10 @@ type mainLayoutProps = {
 export function MainLayout({ children, mainRef, isShowGnb }: mainLayoutProps) {
   return (
     <FlexBox
-      className="w-full h-screen max-w-[640px] bg-white my-0 mx-auto"
+      className="h-screen max-w-[640px] bg-white"
       justify="center"
       margin="my-0 mx-auto"
+      direction="row"
     >
       <Header />
       <main className="h-screen w-full max-w-[640px] bg-white mt-12">{children}</main>

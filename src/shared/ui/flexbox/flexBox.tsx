@@ -2,7 +2,7 @@ import React from 'react';
 import { FlexBoxType } from './FlexBox.types';
 import './index.scss';
 
-const FlexBox: React.FC<FlexBoxType> = ({ className, direction, align, justify, wrap, gap, margin, padding, children }) => {
+const FlexBox = React.forwardRef<HTMLDivElement, FlexBoxType>(({ className, direction, align, justify, wrap, gap, rowGap, columnGap, margin, padding, children, ...props }, ref) => {
   const alignItems = (align: string) => {
     switch (align) {
       case 'start':
@@ -39,13 +39,13 @@ const FlexBox: React.FC<FlexBoxType> = ({ className, direction, align, justify, 
 
   const flexDirection = (direction: string) => {
     switch (direction) {
-      case 'vertical':
+      case 'column':
         return 'flex-col';
-      case 'vertical-reverse':
+      case 'column-reverse':
         return 'flex-col-reverse';
-      case 'horizontal':
+      case 'row':
         return 'flex-row';
-      case 'horizontal-reverse':
+      case 'row-reverse':
         return 'flex-row-reverse';
       default:
         return 'flex-row';
@@ -54,23 +54,29 @@ const FlexBox: React.FC<FlexBoxType> = ({ className, direction, align, justify, 
 
   return (
     <div
+      ref={ref}
       className={`${className || ''}
-        semo-flexbox
-        flex
-        grow
-        ${wrap ? 'flex-wrap' : 'flex-nowrap'}
-        ${justifyContents(justify || 'start')}
-        ${alignItems(align || 'stretch')}
-        ${flexDirection(direction || 'horizontal')}
-        ${padding || 'p-0'}
-        ${margin || 'm-0'}
-        ${direction === 'vertical' ? `gap-y-${gap || '1'}` : `gap-x-${gap || '1'}`}
-      `}
+          semo-flexbox
+          flex
+          grow
+          ${wrap ? 'flex-wrap' : 'flex-nowrap'}
+          ${justifyContents(justify || 'start')}
+          ${alignItems(align || 'stretch')}
+          ${flexDirection(direction || 'row')}
+          ${padding || 'p-0'}
+          ${margin || 'm-0'}
+        `}
+      style={{
+        rowGap: rowGap ? String(Number(rowGap) / 4) + 'rem' : '0',
+        columnGap: columnGap ? String(Number(columnGap) / 4) + 'rem' : '0',
+        gap: gap ? String(Number(gap) / 4) + 'rem' : '0.25rem',
+      }}
+      {...props}
     >
       {children}
     </div>
   );
-};
+});
 
 FlexBox.displayName = 'FlexBox';
 
