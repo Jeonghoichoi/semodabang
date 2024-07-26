@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 import { useEffect } from 'react';
 import { GridBoxType } from './GridBox.types';
 import './index.scss';
 
-const GridBox = React.forwardRef<HTMLDivElement, GridBoxType>(({ className, gridRowsRepeat, gridColumnsRepeat, gridAutoFlow, rowGap, columnGap, gap, children, onClick, ...props }, ref) => {
+const GridBox = React.forwardRef<HTMLDivElement, GridBoxType<MouseEventHandler<HTMLDivElement>>>(({ className, gridRowsRepeat, gridColumnsRepeat, gridAutoFlow, rowGap, columnGap, gap, children, onClick, ...props }, ref) => {
   useEffect(() => {}, [gridRowsRepeat, gridColumnsRepeat, gridAutoFlow, rowGap, columnGap, gap, children]);
 
   return (

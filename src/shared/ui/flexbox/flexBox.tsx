@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 import { FlexBoxType } from './FlexBox.types';
 import './index.scss';
 
-const FlexBox = React.forwardRef<HTMLDivElement, FlexBoxType>(({ className, direction, align, justify, wrap, gap, rowGap, columnGap, margin, padding, children, onClick, ...props }, ref) => {
+const FlexBox = React.forwardRef<HTMLDivElement, FlexBoxType<MouseEventHandler<HTMLDivElement>>>(({ className, direction, align, justify, wrap, gap, rowGap, columnGap, margin, padding, children, onClick, ...props }, ref) => {
   const alignItems = (align: string) => {
     switch (align) {
       case 'start':

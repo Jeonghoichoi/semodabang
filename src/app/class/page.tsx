@@ -1,5 +1,4 @@
 import { Banner, ClassList } from '@/app/class/_ui';
-import { FlexBox } from '@/shared/ui/flexbox/flexBox';
 
 export default function ClassPage() {
   return (

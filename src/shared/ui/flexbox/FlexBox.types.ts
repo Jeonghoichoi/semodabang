@@ -1,4 +1,4 @@
-export type FlexBoxType = {
+export type FlexBoxType<T> = {
   className?: string;
 
   // flex direction -> row | column, default row
@@ -31,5 +31,5 @@ export type FlexBoxType = {
   /* flex그룹내에 자식 요소의 타입  */
   children?: React.ReactNode;
 
-  onClick?: any;
+  onClick?: T;
 };

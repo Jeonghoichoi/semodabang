@@ -1,4 +1,4 @@
-export type GridBoxType = {
+export type GridBoxType<T> = {
   className?: string;
 
   // 그리드 row 반복 개수
@@ -22,5 +22,5 @@ export type GridBoxType = {
   /* grid 그룹내에 자식 요소의 타입  */
   children?: React.ReactNode;
 
-  onClick?: any;
+  onClick?: T;
 };
