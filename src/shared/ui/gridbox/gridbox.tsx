@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { GridBoxType } from './GridBox.types';
 import './index.scss';
 
-const GridBox = React.forwardRef<HTMLDivElement, GridBoxType>(({ className, gridRowsRepeat, gridColumnsRepeat, gridAutoFlow, rowGap, columnGap, gap, children, ...props }, ref) => {
+const GridBox = React.forwardRef<HTMLDivElement, GridBoxType>(({ className, gridRowsRepeat, gridColumnsRepeat, gridAutoFlow, rowGap, columnGap, gap, children, onClick, ...props }, ref) => {
   useEffect(() => {}, [gridRowsRepeat, gridColumnsRepeat, gridAutoFlow, rowGap, columnGap, gap, children]);
 
   return (
@@ -21,6 +21,7 @@ const GridBox = React.forwardRef<HTMLDivElement, GridBoxType>(({ className, grid
         columnGap: columnGap ? String(Number(columnGap) / 4) + 'rem' : '0',
         gap: gap ? String(Number(gap) / 4) + 'rem' : '0.25rem',
       }}
+      onClick={onClick}
       {...props}
     >
       {children}

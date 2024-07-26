@@ -1,6 +1,5 @@
-import { Header } from '@/widgets/Header';
 import { Banner, ClassList } from '@/app/class/_ui';
-import { BottomNavigation } from '@/widgets/bottom/navigation';
+import { FlexBox } from '@/shared/ui/flexbox/flexBox';
 
 export default function ClassPage() {
   return (

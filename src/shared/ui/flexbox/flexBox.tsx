@@ -2,7 +2,7 @@ import React from 'react';
 import { FlexBoxType } from './FlexBox.types';
 import './index.scss';
 
-const FlexBox = React.forwardRef<HTMLDivElement, FlexBoxType>(({ className, direction, align, justify, wrap, gap, rowGap, columnGap, margin, padding, children, ...props }, ref) => {
+const FlexBox = React.forwardRef<HTMLDivElement, FlexBoxType>(({ className, direction, align, justify, wrap, gap, rowGap, columnGap, margin, padding, children, onClick, ...props }, ref) => {
   const alignItems = (align: string) => {
     switch (align) {
       case 'start':
@@ -71,6 +71,7 @@ const FlexBox = React.forwardRef<HTMLDivElement, FlexBoxType>(({ className, dire
         columnGap: columnGap ? String(Number(columnGap) / 4) + 'rem' : '0',
         gap: gap ? String(Number(gap) / 4) + 'rem' : '0.25rem',
       }}
+      onClick={onClick}
       {...props}
     >
       {children}

@@ -21,4 +21,6 @@ export type GridBoxType = {
 
   /* grid 그룹내에 자식 요소의 타입  */
   children?: React.ReactNode;
+
+  onClick?: any;
 };
